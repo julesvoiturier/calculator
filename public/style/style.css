@@ -1,0 +1,224 @@
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgba(188, 171, 155, 0.545);
+    /* background: rgba(185, 188, 169, 0.734); */
+    mix-blend-mode: color-burn;
+    opacity: 90%;
+    position: relative;
+    padding: 0;
+}
+
+#color{
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    z-index: 1;
+    background-image: url(./../../public/src/img/vintageGrain.png);
+    background-size:contain;
+    mix-blend-mode: color-burn;
+    opacity: 100%;
+    pointer-events: none;
+}
+
+#grain{
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    /* background: rgb(69, 59, 55); */
+    background: rgb(26, 25, 24);
+    z-index: -1;
+}
+
+#calculator {
+    height: 400px;
+    width: 700px;
+    background: rgb(226, 227, 221);
+    border-radius: 17px;
+    display: flex;
+    flex-direction: column;
+    border-left: 5px rgb(179, 171, 162) solid;
+    border-top: 5px rgb(188, 172, 152) solid;
+    border-bottom: 5px rgb(100, 89, 72) solid;
+    border-right: 5px rgb(100, 89, 72) solid;
+}
+
+#result{
+    height: 30%;
+    background-image: linear-gradient(to top left, rgb(65, 61, 55), rgb(100, 89, 72));
+    /* background: rgb(65, 61, 55); */
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px 10px 0px 0px;
+
+}
+
+p{
+    height: 90%;
+    width: 54.5%;
+    background-image: linear-gradient(to top left, rgb(74, 144, 74), rgb(154, 240, 154));
+    border-radius: 10px;
+    border-right: 5px rgb(188, 172, 152) solid;
+    border-bottom: 5px rgb(188, 172, 152) solid;
+    border-top: 5px rgb(33, 31, 28) solid;
+    border-left: 5px rgb(33, 31, 28) solid;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    margin: 0;
+    padding-left: 20px;
+    color: rgb(52, 91, 52);
+    font-weight: 900;
+    overflow: hidden;
+}
+
+#numbers-operators{
+    display: flex;
+    justify-content: space-evenly;
+    height: 70%;
+}
+
+#numbers{
+    width: 60%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(to top left, rgb(135, 120, 110), rgb(170, 148, 133));
+    /* background: rgb(135, 120, 110); */
+    gap: 10px;
+    padding: 10px;
+    border-radius: 0px 0px 0px 10px;
+    position: relative;
+}
+
+.row{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.number{
+    width: 33%;
+    height: 80px;
+    background-color: rgb(243, 237, 214);
+    border: none;
+    border-radius: 10px;
+    font-size: 40px;
+    color: rgb(135, 120, 110);
+    font-weight: 900;
+    transition: 0.2s;
+    border-top: 5px rgb(220, 206, 189) solid;
+    border-left: 5px rgb(220, 206, 189) solid;
+    border-right: 5px rgb(65, 61, 55) solid;
+    border-bottom: 5px rgb(65, 61, 55) solid;
+    background-image: linear-gradient(to top left, rgb(197, 186, 143), rgb(248, 246, 240));
+}
+
+.ac{
+    width: 33%;
+    height: 80px;
+    border: none;
+    border-radius: 10px;
+    font-size: 35px;
+    font-weight: 900;
+    background-image: linear-gradient(to top left, rgb(72, 115, 190), rgb(90, 135, 215));
+    border-top: 5px rgb(104, 155, 244) solid;
+    border-left: 5px rgb(104, 155, 244) solid;
+    border-right: 5px rgb(43, 80, 143) solid;
+    border-bottom: 5px rgb(43, 80, 143) solid;
+    color: rgb(43, 80, 143);
+    transition: 0.2s;
+}
+
+#operators{
+    width: 40%;
+    height: auto;
+    background: rgb(226, 227, 221);
+    background-image: linear-gradient(to top left, rgb(200, 200, 196), rgb(226, 227, 221) );
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 0px 0px 10px 0px;
+}
+
+#symbols{
+    height: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#equal{
+    height: 80px;
+    width: 100%;
+    background-color: rgb(224, 103, 79);
+    border: none;
+    border-radius: 10px;
+    font-size: 40px;
+    font-weight: 900;
+    color: rgb(136, 59, 44);
+    transition: 0.2s;
+    border-top: 5px rgb(255, 179, 164) solid;
+    border-left: 5px rgb(255, 179, 164)  solid;
+    border-bottom: 5px rgb(136, 59, 44) solid;
+    border-right: 5px rgb(136, 59, 44) solid;
+    background-image: linear-gradient(to top left, rgb(224, 103, 79), rgb(246, 135, 113));
+}
+
+.operator{
+    width: 50%;
+    height: 80px;
+    background-color: rgb(65, 61, 55);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 40px;
+    font-weight: 900;
+    transition: 0.2s;
+    border-top: 5px rgb(188, 172, 152) solid;
+    border-left: 5px rgb(188, 172, 152) solid;
+    border-bottom: 5px rgb(33, 31, 28) solid;
+    border-right: 5px rgb(33, 31, 28) solid;
+    background-image: linear-gradient(to top left, rgb(46, 43, 39), rgb(100, 89, 72));
+}
+
+#shadow{
+    position: absolute;
+}
+
+.tileShadow{
+    width: 33%;
+    height: 80px;
+    background-color: rgb(91, 88, 73);
+    border: none;
+    border-radius: 10px;
+    font-size: 40px;
+    z-index: 2;
+    color: rgb(73, 63, 57);
+    font-weight: 900;
+    transition: 0.2s;
+}
+
+.ac:active{
+    background-image: linear-gradient(to top left, rgb(90, 135, 215), rgb(72, 115, 190));
+}
+
+.number:active{
+    background-image: linear-gradient(to top left, rgb(248, 246, 240), rgb(208, 202, 177));
+}
+
+.operator:active{
+    background-image: linear-gradient(to top left, rgb(100, 89, 72), rgb(46, 43, 39));
+}
+
+#equal:active{
+    background-image: linear-gradient(to top left, rgb(246, 135, 113), rgb(224, 103, 79));
+}
